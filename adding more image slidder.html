@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding more image to the slider</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #222;
+        }
+    
+        section {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+    
+        .mySlide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            /* hide by default */
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+    
+        <section>
+            <img class="mySlide" src="daym.jpg" alt="First slide">
+            <img class="mySlide" src="gl.jpg" alt="Second slide">
+            <img class="mySlide" src="third.jpg" alt="Third slide">
+        </section>
+    
+        <script>
+            let myIndex = 0;
+            carousel();
+
+            function carousel() {
+                let i;
+                let slides = document.getElementsByClassName("mySlide");
+
+              
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+               
+                myIndex++;
+                if (myIndex > slides.length) {
+                    myIndex = 1;
+                }
+
+                
+                slides[myIndex - 1].style.display = "block";
+
+                
+                setTimeout(carousel, 2000);
+            }
+        </script>
+    
+
+
+    
+</body>
+</html>
