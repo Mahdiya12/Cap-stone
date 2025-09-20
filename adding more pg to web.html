@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding more pages to my website</title>
+
+    <style>
+
+        .topnav{
+            content: normal;
+            overflow: hidden;
+            text-align: center;
+
+        }
+
+        body{
+            background-color: rgb(179, 228, 214);
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .topnav a{
+            padding: 25px 35px;
+            background-color: cornsilk;
+            text-align: center;
+        }
+
+        .topnav header{
+            color: indianred;
+        }
+
+        .topnav a:hover{
+            color: crimson;
+        }
+
+        .topnav a.active{
+            background-color: lightpink;
+            color: crimson;
+        }
+
+        .pimg3 {
+            position: relative;
+            opacity: 0.7;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-image: url("gl.jpg");
+            min-height: 500px;
+        }
+
+        .section {
+            text-align: center;
+            padding: 50px 80px;
+        }
+
+        .section-dark {
+            background-color: #4f667d;
+            color: #ddd;
+        }
+
+        .ptext {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            font-size: 20px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        .ptext .border {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .ptext .border.trans {
+            background-color: transparent;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="topnav">
+
+        <header>
+            <h1>
+                Welcome to the coddy page!!
+            </h1>
+        </header>
+
+        <a class="active" href="">#Home</a>
+        <a href="">#About</a>
+        <a href="">#Gallery</a>
+        <a href="">#Food menu</a>
+        <a href="">#Offers</a>
+        <a href="">#Locations</a>
+        <a href="">#Contacts</a>
+
+        <span class="border trans" style="font-size: 40px;">
+            <h4>Learning and knowing to code is a priviledge!!</h4>
+        </span>
+        
+        <section class="section section-dark">
+        
+            <h2>section one</h2>
+            <p>web development is the work involved in the develpoment of a website. It is used in internet for different
+                purpose.</p>
+        
+        </section>
+        
+        <div class="pimg3">
+            <div class="ptext">
+                <span class="border trans">
+                    Image to text
+                </span>
+            </div>
+        </div>
+
+</body>
+
+</html>
