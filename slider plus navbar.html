@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider and Navbar</title>
 
     <style>
+        .pimg3 {
+            position: relative;
+            opacity: 0.7;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-image: url("gl.jpg");
+            min-height: 500px;
+        }
+
+        .section {
+            text-align: center;
+            padding: 20px 10px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .section-dark {
+            background-color: #282e34;
+            color: #ddd;
+        }
+
+        .ptext {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+            font-size: 20px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        .ptext .border {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .ptext .border.trans {
+            background-color: transparent;
+        }
+
         .topnav {
             content: normal;
             overflow: hidden;
             text-align: center;
         }
-    
+
         body {
             background-color: lightcyan;
             font-family: Arial, Helvetica, sans-serif;
             font-style: italic;
             margin: 0;
         }
-    
+
         .topnav a {
             padding: 25px 35px;
             background-color: cornsilk;
             text-align: center;
         }
-    
+
         .topnav header {
             color: indianred;
         }
-    
+
         .topnav a:hover {
             color: crimson;
         }
-    
+
         .topnav a.active {
             background-color: lightpink;
             color: crimson;
         }
-            
-    
+
+
         section {
             position: relative;
             width: 500px;
@@ -47,17 +92,65 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-    
+
         .mySlide {
             width: 100%;
             height: 100%;
-            display: none;
             object-fit: cover;
-            align-content: center;
+            display: none;
+        }
+
+        section {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin: 20px auto;
+        }
+
+        span.border.trans {
+            display: block;
+            text-align: center;
+            margin: 30px auto;
+            font-size: 40px;
+            max-width: fit-content;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+        }
+
+        .parent {
+            display: flex;
+            justify-content: space-around;
+            background-color: lightpink;
+            color: crimson;
+            width: 100%;
+            left: 0px;
+            position: fixed;
+            bottom: 40px;
+
+            padding: 5px 0;
+        }
+
+        .parent h2,
+        .parent h3,
+        .parent p {
+            margin: 2px 0;
+            font-size: 14px;
         }
     </style>
 
 </head>
+
 <body>
 
     <div class="topnav">
@@ -68,21 +161,21 @@
             </h1>
         </header>
 
-       
-    
+
+
         <a class="active" href="">#Home</a>
         <a href="">#About</a>
         <a href="">#Gallery</a>
         <a href="">#Contacts</a>
-    
+
     </div>
 
     <section>
-        <img class="mySlide" src="daym.jpg" alt="First slide" style="height: 500px; width: 500px;">
-        <img class="mySlide" src="gl.jpg" alt="Second slide"style="height: 500px; width: 500px;">
-        <img class="mySlide" src="third.jpg" alt="Third slide"style="height: 500px; width: 500px;">
+        <img class="mySlide" src="daym.jpg" alt="First slide">
+        <img class="mySlide" src="gl.jpg" alt="Second slide">
+        <img class="mySlide" src="third.jpg" alt="Third slide">
     </section>
-    
+
     <script>
         let myIndex = 0;
         carousel();
@@ -109,6 +202,54 @@
             setTimeout(carousel, 2000);
         }
     </script>
-    
+
+    <span class="border trans" style="font-size: 40px;">
+        <p>Welcome you all to this website</p>
+    </span>
+
+    <section class="section section-dark">
+
+        <h2>section one</h2>
+        <p>web development is the work involved in the develpoment of a website. It is used in internet for different
+            purpose.</p>
+
+    </section>
+
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border trans">
+                Image to text
+            </span>
+        </div>
+    </div>
+
+
+    <div class="parent">
+
+
+
+        <div>
+            <h2>Beauty Hub</h2>
+            <h3>Where confidence is the beauty</h3>
+            <p>House:33, road:4, block:B</p>
+            <p>Dhaka, Bangladesh</p>
+        </div>
+
+        <div>
+            <p>contact us</p>
+            <p>about us</p>
+            <p>gallery</p>
+            <p>Products</p>
+            <p>Service</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>@Copy all rights and reserved by Mahdiya</p>
+    </div>
+
+
 </body>
+
 </html>
